@@ -259,10 +259,14 @@ public class AttentionZiliaoActivity extends MVPBaseActivity<AttentionZiliaoCont
                 ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                         != PackageManager.PERMISSION_GRANTED ||
                 ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
-                        != PackageManager.PERMISSION_GRANTED) {//未开启定位权限
+                        != PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS)
+                        != PackageManager.PERMISSION_GRANTED) {
             //开启定位权限,200是标识码
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_SMS,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 300);
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_CONTACTS,
+                    Manifest.permission.READ_EXTERNAL_STORAGE}, 300);
         } else {
             getSmsList();
         }

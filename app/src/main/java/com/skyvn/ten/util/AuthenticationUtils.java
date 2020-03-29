@@ -287,7 +287,6 @@ public class AuthenticationUtils {
         }
     }
 
-
     /**
      * 短信记录权限
      */
@@ -297,10 +296,14 @@ public class AuthenticationUtils {
                 ContextCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                         != PackageManager.PERMISSION_GRANTED ||
                 ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE)
-                        != PackageManager.PERMISSION_GRANTED) {//未开启定位权限
+                        != PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_CONTACTS)
+                        != PackageManager.PERMISSION_GRANTED) {
             //开启定位权限,200是标识码
             ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.READ_SMS,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 300);
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_CONTACTS,
+                    Manifest.permission.READ_EXTERNAL_STORAGE}, 300);
         } else {
             getSmsList(activity);
         }

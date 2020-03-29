@@ -20,6 +20,7 @@ import com.skyvn.ten.bean.RecommendBO;
 import com.skyvn.ten.bean.StatusBO;
 import com.skyvn.ten.bean.StsTokenBean;
 import com.skyvn.ten.bean.VersionBO;
+import com.skyvn.ten.config.IConstant;
 
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ import rx.Observable;
 public interface HttpService {
 
     //    String URL = "http://tta.fengyunv40.com/";   //正式服
-    String URL = "http://47.96.126.117:9986/";   //测试服
+    String URL = IConstant.URL;   //测试服
 //    String URL = "http://mapi.platform.yinghezhong.com/";  //测试服2
 //    String URL = "http://api.open.yinghezhong.com/";  //正式环境
 //    String URL = "http://mapi.open.yinghezhong.com/";  //正式环境2

@@ -31,12 +31,28 @@ public interface IConstant {
     /**
      * AppID
      */
-    String appid = "1237613520948129793";
+    String appid = "1243845259055222786";
 
     /**
      * 租户id
      */
-    String zuhuID = "1234763145872871425";
+    String zuhuID = "1243744693557022722";
 
+    /**
+     * 服务器接口地址
+     */
+    String URL = "http://tta.fengyunv40.com/";
+
+//    app打包：
+//    百倍云：
+//    saas-app：currentApplicationId：1237328537956216833
+//    接口地址：http://47.96.126.117:9989
+//    租户app：currentApplicationId：1237613520948129793 ，currentTenantId：1234763145872871425
+//    接口地址：http://47.96.126.117:9986
+//    客户：
+//    saas-app：currentApplicationId：1242415496784642049
+//    接口地址：http://tsa.fengyunv40.com
+//    租户app：currentApplicationId：1242353191250165761 ，currentTenantId：1242352620035608577
+//    接口地址：http://tta.fengyunv40.com
 
 }
